@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RANJAN TRADER</title>
+  <link rel="stylesheet" href="/static/style.css" />
+
+</head>
+
+<body>
+  <div class="main-container">
+    <h4>RANJAN TRADER</h4>
+    <h3>INVOICE</h3>
+    <div id="p">
+      <div id="cus-detail"> 
+        <div id="cus-input">
+          <div class="label">TO : </div><input type="text" placeholder="Name/Cash" id="name" autofocus><br>
+          <div class="label">Add : </div><input type="text" placeholder="Address"><br>
+          <div class="label">GST :</div><input type="text" placeholder="GST No" id="gstno"><br>
+        </div>
+        <div id="show-detail"></div>
+      </div>
+      <div id="ind">
+        <input type="text" placeholder="Date" id="date">
+        <div id="show-date"></div>
+        <input type="text" placeholder="Invoice Number" id="ino">
+        <div id="show-billno"></div>
+      </div>
+    </div>
+
+    <div id="table-con">
+      <table>
+        <tr id="heading">
+          <td>S.NO</td>
+          <td>ITEAM NAME</td>
+          <td>HSN </td>
+          <td>GST</td>
+          <td>QUANTITY</td>
+          <td>PER</td>
+          <td>RATE</td>
+          <td>TOTAL</td>
+        </tr>
+        <tr id="submit-form">
+          <td><input id="sno" type="text" name="serial-no" disabled /></td>
+          <td><input id="iteamname" type="text" name="item-name" list="itm-name" />
+            <datalist id="itm-name">
+
+            </datalist>
+          </td>
+          <td><input id="hsn" type="text" name="hsn" /></td>
+          <td><input id="gst" type="text" name="gst" onchange="updatetotal()" /></td>
+          <td><input id="quantity" type="text" name="quantity" onchange="updatetotal()" /></td>
+          <td><input id="per" type="text" name="per-unit" /></td>
+          <td><input id="rate" type="text" name="rate" onchange="updatetotal()" onkeydown="updatetotal()" /></td>
+          <td><input id="total" type="text" name="total" disabled /></td>
+        </tr>
+      </table>
+
+      <div id="edit-form-holder">
+        <div id="edi-form">
+          <div><input type="text" disabled></div>
+          <div><input type="text"></div>
+          <div><input type="text"></div>
+          <div><input type="text" id="gstupdate" onchange="updatetotal_editform()"></div>
+          <div><input type="text" id="quantityupdate" onchange="updatetotal_editform()"></div>
+          <div><input type="text"></div>
+          <div><input type="text" id="rateupdate" onchange="updatetotal_editform()" onkeydown="updatetotal_editform()">
+          </div>
+          <div><input type="text" id="totalupdate" disabled></div>
+        </div>
+        <button id="update" onclick="insertrowupdate()">update</button>
+      </div>
+      <div id="sub-total">
+        <div id="subtotal-display" class="total-dis">
+          <div class="lable">Sub Total</div>
+          <div class="value" id="tvalue"></div>
+        </div>
+      </div>
+      <div id="ex-con">
+        <div id="gstd">
+          <div class="total-dis" id="gst5-display">
+            <div class="lable">GST 5%</div>
+            <div class="value"></div>
+          </div>
+          <div class="total-dis" id="gst12-display">
+            <div class="lable">GST 12%</div>
+            <div class="value"></div>
+          </div>
+          <div class="total-dis" id="gst18-display">
+            <div class="lable">GST 18%</div>
+            <div class="value"></div>
+          </div>
+          <div class="total-dis" id="gst28-display">
+            <div class="lable">GST 28%</div>
+            <div class="value"></div>
+          </div>
+        </div>
+      </div>
+      <div id="grand-total">
+        <div class="lable">Total</div>
+        <div class="value" id="tvalue"></div>
+      </div>
+      <div>
+        <button id="save" onclick="save()">Save</button>
+        <button id="delete" onclick="del()">delete</button>
+      </div>
+      <div id=busdetail>
+        <table id="au">
+          <tr id="bfrow">
+            <td>Bank Name : State bank of India<br>
+                IFC :SBIN0014638<br>
+                Acc. No : 37936255851<br>
+                Address :Pal Building, Hiranagar,Mandi Road<br>
+                contact : 8627814292<br>
+                GST No. :- 02BIAPC942K1ZK<br>
+            <td>Authorized Signature </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script async="async" src="/static/new.js"></script>
+  </div>
+</body>
+
+</html>

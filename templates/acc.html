@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f0f2f5;
+        }
+        form input{
+            margin-top: 2%;
+            font-weight: bolder;
+            padding: 15px;
+            width: 70%;
+            border-radius: 5%;
+            border: 1px solid rgb(207, 203, 203) ;
+        }
+        form{
+            background-color: #fff;
+            height: 70vh;
+            width: 50vw;
+            border: 1px solid black;
+            overflow: auto;
+            text-align: center;
+            border-radius: 20px;
+        }
+        #form{
+            margin-top: 120px;
+            text-align: -webkit-center;
+        }
+        #sub{
+            background-color: #42b72a;
+            margin-top: 3%;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 2%;
+            width: 60%;
+            border-radius: 5%;
+            color: white;
+            border: 1px solid rgb(207, 203, 203) ;
+        }
+    </style>
+</head>
+<body>
+    {% if n %}
+    <script>
+        alert("Choose another user name")
+    </script>
+    {% endif %}
+    <div id="form">
+        <form action="newuser" method="post">
+            {% csrf_token %}
+            <h1>DETAILS</h1>
+            <input type="text" name="name" id="" placeholder="User Name" required>
+            <input type="password" name="password" id="" placeholder="Passowrd" required>
+            <input type="email" name="email" id="" placeholder="Email" required>
+            <input type="text" name="pno" id="" placeholder="Phone Number" required>
+            <input type="submit" value="Submit" id="sub">
+        </form>
+    </div>
+</body>
+</html>

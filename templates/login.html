@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f0f2f5;
+        }
+        form input{
+            margin-top: 5%;
+            font-weight: bolder;
+            padding: 3%;
+            width: 80%;
+            border-radius: 5%;
+            border: 1px solid rgb(207, 203, 203) ;
+        }
+        h1{
+            letter-spacing: 5px;
+        }
+        form{
+            border-radius: 40px;
+            background-color: #fff;
+            border: 1px solid rgb(207, 203, 203);
+            width: 30vw;
+            height: 65vh;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        #btn{
+            margin-bottom: 20px;
+            background-color: #1877f2;
+            font-weight: bolder;
+            font-size: 20px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+        }
+        #form{
+            margin-top: 150px;
+            text-align: -webkit-center;
+            /* overflow: scroll; */
+        }
+        hr{
+            width: 80%;
+        }
+        #createacc{
+            background-color: #42b72a;
+            margin-top: 3%;
+            font-weight: bolder;
+            font-size: 20px;
+            padding: 3%;
+            width: 80%;
+            border-radius: 5%;
+            color: white;
+            border: 1px solid rgb(207, 203, 203) ;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form action="billing" method="post">
+            {% csrf_token %}
+            <h1>LOG IN</h1>
+            <input type="text" name="username" id="" placeholder="User Name"><br>
+            <input type="password" name="password" id="" placeholder="Password"><br>
+            <input type="submit" value="Log In" id="btn">
+            <hr><br>
+            <a href="/createacc" id="createacc">Create Account</a>
+        </form>
+    </div>
+</body>
+</html>
