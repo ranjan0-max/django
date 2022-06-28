@@ -1,7 +1,7 @@
 #run these commands in cmd
 
-pip install Django
-pip install "pymongo[srv]"
+1.pip install Django,
+2.pip install "pymongo[srv]"
 
 #go to that dir in which manage.py file exist
 
