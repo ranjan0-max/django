@@ -1,8 +1,8 @@
-#run these commands in cmd
+# run these commands in cmd
 
-1.pip install Django,
-2.pip install "pymongo[srv]"
+# 1.pip install Django
+# 2.pip install "pymongo[srv]"
 
-#go to that dir in which manage.py file exist
+# go to that dir in which manage.py file exist
 
 python manage.py migrate
